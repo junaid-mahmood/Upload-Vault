@@ -23,7 +23,7 @@ UploadVault is a secure web application that allows users to upload and save the
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/UploadVault.git
+   git clone https://github.com/junaid-mahmood/UploadVault.git
    cd UploadVault
    pip install -r requirements.txt
 
