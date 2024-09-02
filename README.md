@@ -3,7 +3,7 @@
 UploadVault is a secure web application that allows users to upload and save their files on another computer easily. The application provides a simple interface for uploading files, viewing uploaded files, and downloading them when needed. 
 
 ## Table of Contents
--[Screenshots](#screenshots)
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
