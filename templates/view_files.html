@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Viewer</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .download-button {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Files Currently On The Webserver</h1>
+    <ul>
+        {% for file in files %}
+            {% if file not in ['init-default-profile-extentions', 'gitignore'] %}
+                <li>
+                    {{ file }}
+                    [<a href="{{ url_for('download', filename=file) }}" class="download-button"> Preview & Download </a>]
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <button onclick="goBack()">Back</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

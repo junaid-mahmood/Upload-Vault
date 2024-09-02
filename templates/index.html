@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Vault</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #9ac06c;
+            padding: 35px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .view-files-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dropzone {
+            border: 2px dashed #ddd;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: #f3f3f3;
+        }
+
+        .dropzone .dz-message {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .dropzone .dz-message img {
+            margin-bottom: 20px;
+        }
+
+        .dropzone .dz-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .dropzone .dz-button:hover {
+            background-color: #333;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            text-align: center;
+        }
+
+        .message {
+            display: inline-block;
+            margin-top: 20%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UploadVault 🔒</h1>
+        <nav>
+            <a href="/view-files" class="view-files-button">View Files</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form action="/upload" class="dropzone" id="file-upload-form">
+            <div class="dz-message">
+                <div>
+                    <img src="https://www.svgrepo.com/show/12324/cloud-uploading-arrow.svg" alt="Upload Icon" width="50">
+                </div>
+                Drag & Drop Files Here
+                <br>or<br>
+                <button class="dz-button" type="button">Choose Files to Upload</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
