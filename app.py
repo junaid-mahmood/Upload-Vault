@@ -29,20 +29,6 @@ def upload():
     else:
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
 
-    return {'status': 'success'}
-
-@app.route('/view-files', methods=['GET', 'POST'])
-def view_files():
-    password_attempt = request.form.get('password', '')
-
-    if password_attempt == PASSWORD:
-        files = os.listdir(app.config['UPLOAD_FOLDER'])
-        filtered_files = [file for file in files if file not in ['init-default-profile-extentions', 'gitignore']]
-        return render_template('view_files.html', files=filtered_files)
-    elif password_attempt == '' and request.method == 'POST':
-        return 'Password is required'
-    else:
-        return render_template('password_prompt.html')
 
 @app.route('/download/<filename>')
 def download(filename):
